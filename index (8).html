@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Mobiles - 10+ Years of Guaranteed Mobile Sales & Service in Coimbatore</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050b10; /* Extra Deep Navy Blue Background */
+            color: #f1f5f9;
+            overflow-x: hidden;
+        }
+        /* Custom CSS for the stunning staggered fade-in effect */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px); 
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animated-section {
+            opacity: 0; /* Start hidden */
+            /* Reduced duration for a snappy feel */
+            animation: none; 
+            animation-duration: 0.4s; 
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
+        }
+        .text-accent-blue {
+            color: #4299e1; /* Primary Blue Accent - Tailwind Blue 500 */
+        }
+        .bg-gradient-premium {
+            background-image: linear-gradient(135deg, #1a202c, #0d1117); /* Subtle card background */
+        }
+        .shadow-trust {
+             /* Deep shadow with a strong blue glow */
+             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(66, 153, 225, 0.5); 
+        }
+        .service-icon-bg {
+            background-color: #4299e1;
+            box-shadow: 0 0 15px rgba(66, 153, 225, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SVG Icon Definitions (Used for Services and Reviews) -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="phone-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 8.5V4h-4"/><path d="M22 4L12 14"/><path d="M10 2l1.5 1.5M2 17l3 3M20 7l-3-3"/><path d="M12 20h.01"/><path d="M5 21a2 2 0 01-2-2v-2a2 2 0 012-2h14a2 2 0 012 2v2a2 2 0 01-2 2H5z"/></symbol>
+        <symbol id="replace" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2c4.4 0 8 3.6 8 8s-3.6 8-8 8"/><path d="M10 22c-4.4 0-8-3.6-8-8s3.6-8 8-8"/><path d="M15 16l-3 3-3-3"/><path d="M9 8l3-3 3 3"/></symbol>
+        <symbol id="used" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11.66V7.5A4.5 4.5 0 0112 3a4.5 4.5 0 014.5 4.5v4.16"/><path d="M17.5 15.5H6.5a2 2 0 00-2 2v2a2 2 0 002 2h11a2 2 0 002-2v-2a2 2 0 00-2-2z"/></symbol>
+        <symbol id="map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+        <symbol id="user-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M17 11l2 2 4-4"/></symbol>
+        <symbol id="clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+        <symbol id="award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><path d="M12 15L12 21M17 19L19 21M7 19L5 21"/></symbol>
+        <symbol id="star" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </symbol>
+    </svg>
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#111827] bg-opacity-95 backdrop-blur-sm shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-3xl font-black tracking-wider text-accent-blue">GALAXY</span>
+                    <span class="text-3xl font-light text-gray-300 ml-1">MOBILES</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#services" class="text-gray-300 hover:text-white text-sm font-medium transition duration-200">Services</a>
+                    <a href="#phones" class="text-gray-300 hover:text-white text-sm font-medium transition duration-200">Availability</a>
+                    <a href="#testimonials" class="text-gray-300 hover:text-white text-sm font-medium transition duration-200">Reviews</a>
+                    <a href="#contact" class="bg-accent-blue text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-600 transition duration-200 shadow-lg shadow-blue-500/50">Visit Store</a>
+                </div>
+                <!-- Mobile Menu Button Placeholder -->
+                <button class="md:hidden text-gray-400 hover:text-white focus:outline-none transition duration-200">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="pt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- 1. HERO SECTION & EXPERIENCE BANNER -->
+        <section class="pb-16 text-center">
+            <div class="animated-section" data-delay="0.05">
+                <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tighter leading-tight text-white mb-4">
+                    Coimbatore's <span class="text-accent-blue block sm:inline">Guaranteed Mobile Expertise.</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-10">
+                    The leading shop in Gandhipuram for <strong class="text-white">Genuine Sales</strong> and <strong class="text-white">Guaranteed Repair Services</strong> since 2014.
+                </p>
+            </div>
+            
+            <!-- 10+ Years Experience Banner -->
+            <div id="experience" class="bg-blue-900/50 border border-blue-700/50 py-4 px-6 rounded-xl max-w-lg mx-auto shadow-trust animated-section" data-delay="0.10">
+                <p class="text-3xl font-black text-white uppercase tracking-widest">
+                    <span class="text-5xl text-yellow-400 mr-3">10+</span> Years Trusted
+                </p>
+                <p class="text-sm text-gray-300 mt-1">Local Focus, Premium Mobile Solutions</p>
+            </div>
+        </section>
+
+
+        <!-- 2. WHY CHOOSE US (TRUST PILLARS) SECTION -->
+        <section class="py-16 animated-section" data-delay="0.15">
+            <h2 class="text-4xl font-bold text-center mb-12">Why Choose Galaxy Mobiles?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1: Dual Expertise -->
+                <div class="p-8 bg-gradient-premium rounded-xl shadow-trust transition duration-300 hover:bg-gray-700/70">
+                    <div class="text-accent-blue mb-3">
+                        <svg class="w-10 h-10"><use xlink:href="#phone-plus"></use></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Dual Sales & Service Expertise</h3>
+                    <p class="text-gray-400">Our sales advice is backed by deep technical repair knowledge, ensuring you choose the absolute best device for long-term reliability.</p>
+                </div>
+                <!-- Feature 2: Certified Repair -->
+                <div class="p-8 bg-gradient-premium rounded-xl shadow-trust transition duration-300 hover:bg-gray-700/70">
+                    <div class="text-accent-blue mb-3">
+                        <svg class="w-10 h-10"><use xlink:href="#user-check"></use></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Certified Repair Guarantee</h3>
+                    <p class="text-gray-400">All repairs are performed by certified, experienced technicians using only <strong class="text-white">OEM quality spare parts</strong>, backed by a service warranty.</p>
+                </div>
+                <!-- Feature 3: Best Value -->
+                <div class="p-8 bg-gradient-premium rounded-xl shadow-trust transition duration-300 hover:bg-gray-700/70">
+                    <div class="text-accent-blue mb-3">
+                        <svg class="w-10 h-10"><use xlink:href="#award"></use></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Unbeatable Value & Trust</h3>
+                    <p class="text-gray-400">From competitive pricing on new phones to <strong class="text-white">fair, transparent valuation</strong> on trade-ins, we are committed to honest dealings in Coimbatore.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 3. DETAILED SERVICES SECTION -->
+        <section id="services" class="py-16 animated-section" data-delay="0.20">
+            <h2 class="text-4xl font-bold text-center mb-12">Our Specialized Mobile Services</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Service 1: Expert Repairs -->
+                <div class="text-center p-6 rounded-xl border-t-4 border-red-500 bg-gray-800 shadow-lg transition duration-500 hover:shadow-2xl">
+                    <div class="w-16 h-16 rounded-full mx-auto mb-4 service-icon-bg flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white"><use xlink:href="#replace"></use></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-red-400 mb-2">Expert Mobile Repair</h3>
+                    <p class="text-gray-400 mb-4 text-sm font-semibold">Screen fixes, battery replacements, complex board-level chip repairs, and water damage recovery. <span class="font-bold text-red-300">Fast turnaround guaranteed.</span></p>
+                    <a href="#contact" class="text-sm font-semibold text-red-400 hover:text-red-500 transition">Book Repair &rarr;</a>
+                </div>
+
+                <!-- Service 2: New Phone Sales -->
+                <div class="text-center p-6 rounded-xl border-t-4 border-accent-blue bg-gray-800 shadow-lg transition duration-500 hover:shadow-2xl">
+                    <div class="w-16 h-16 rounded-full mx-auto mb-4 service-icon-bg flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white"><use xlink:href="#phone-plus"></use></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-accent-blue mb-2">Latest New Phones</h3>
+                    <p class="text-gray-400 mb-4 text-sm font-semibold">Apple, Samsung, Vivo, and Redmi. All models come with official invoices and <span class="font-bold text-blue-300">full manufacturer warranty.</span></p>
+                    <a href="#phones" class="text-sm font-semibold text-accent-blue hover:text-blue-400 transition">View Models &rarr;</a>
+                </div>
+
+                <!-- Service 3: Certified Used Phones -->
+                <div class="text-center p-6 rounded-xl border-t-4 border-yellow-500 bg-gray-800 shadow-lg transition duration-500 hover:shadow-2xl">
+                    <div class="w-16 h-16 rounded-full mx-auto mb-4 service-icon-bg flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white"><use xlink:href="#used"></use></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-2">Certified Pre-Owned Sales</h3>
+                    <p class="text-gray-400 mb-4 text-sm font-semibold">Fully tested, certified, and warranted used phones. Quality you can trust at <span class="font-bold text-yellow-300">best-in-market prices.</span></p>
+                    <a href="#phones" class="text-sm font-semibold text-yellow-400 hover:text-yellow-500 transition">Check Used Stock &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SPECIFIC PHONE AVAILABILITY SHOWCASE -->
+        <section id="phones" class="py-16 animated-section" data-delay="0.25">
+            <h2 class="text-4xl font-bold text-center mb-12">Latest Availability & Featured Stock</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+                
+                <!-- iPhone 16 Pro Max - Uses local path iPhone.jpeg -->
+                <div class="rounded-xl overflow-hidden bg-gray-800 shadow-trust transition duration-300 hover:scale-[1.05] md:col-span-2 lg:col-span-1">
+                    <img 
+                        src="iPhone.jpeg" 
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x400/1e293b/ffffff?text=iPhone+16+Pro+Max';" 
+                        alt="iPhone 16 Pro Max" 
+                        class="w-full h-48 object-cover">
+                    <div class="p-3 text-center">
+                        <p class="font-bold text-white text-lg">iPhone 16 Pro Max</p>
+                        <p class="text-accent-blue text-sm">New Stock Available</p>
+                    </div>
+                </div>
+
+                <!-- Samsung S22 Ultra - Uses local path Samsung.jpeg -->
+                <div class="rounded-xl overflow-hidden bg-gray-800 shadow-trust transition duration-300 hover:scale-[1.05] md:col-span-3 lg:col-span-2">
+                    <img 
+                        src="Samsung.jpeg" 
+                        onerror="this.onerror=null;this.src='https://placehold.co/800x400/1e293b/ffffff?text=Samsung+S22+Ultra';" 
+                        alt="Samsung S22 Ultra" 
+                        class="w-full h-48 object-cover">
+                    <div class="p-3 text-center">
+                        <p class="font-bold text-white text-lg">Samsung S22 Ultra</p>
+                        <p class="text-yellow-400 text-sm">Certified Pre-Owned</p>
+                    </div>
+                </div>
+
+                <!-- Vivo Phone - Uses local path Vivo.jpeg -->
+                <div class="rounded-xl overflow-hidden bg-gray-800 shadow-trust transition duration-300 hover:scale-[1.05] md:col-span-2 lg:col-span-1">
+                    <img 
+                        src="Vivo.jpeg" 
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x400/1e293b/ffffff?text=Vivo+Latest+Model';" 
+                        alt="Vivo Phone" 
+                        class="w-full h-48 object-cover">
+                    <div class="p-3 text-center">
+                        <p class="font-bold text-white text-lg">Vivo (All Series)</p>
+                        <p class="text-accent-blue text-sm">Latest Stock</p>
+                    </div>
+                </div>
+
+                <!-- Redmi Phone - Uses local path Redmi.jpeg -->
+                <div class="rounded-xl overflow-hidden bg-gray-800 shadow-trust transition duration-300 hover:scale-[1.05] md:col-span-3 lg:col-span-1">
+                    <img 
+                        src="Redmi.jpeg" 
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x400/1e293b/ffffff?text=Redmi+Budget+King';" 
+                        alt="Redmi Phone" 
+                        class="w-full h-48 object-cover">
+                    <div class="p-3 text-center">
+                        <p class="font-bold text-white text-lg">Redmi / Xiaomi</p>
+                        <p class="text-accent-blue text-sm">Budget & Mid-Range</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. TESTIMONIALS & REVIEWS SECTION -->
+        <section id="testimonials" class="py-16 animated-section" data-delay="0.30">
+            <h2 class="text-4xl font-bold text-center mb-12">Hear from Our Satisfied Customers</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                
+                <!-- Review Card 1 (Repair) -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-inner border-l-4 border-red-400">
+                    <div class="flex text-yellow-400 mb-3">
+                        <svg class="w-4 h-4 mr-1"><use xlink:href="#star"></use></svg>
+                        <svg class="w-4 h-4 mr-1"><use xlink:href="#star"></use></svg>
+                        <svg class="w-4 h-4 mr-1"><use xlink:href="#star"></use></svg>
+                        <svg class="w-4 h-4 mr-1"><use xlink:href="#star"></use></svg>
+                        <svg class="w-4 h-4"><use xlink:href="#star"></use></svg>
+                    </div>
+                    <p class="text-gray-300 italic mb-4">"Fixed my water-damaged phone when others gave up! The technical skill at Galaxy Mobiles is truly exceptional. Highly recommend for any <strong class="text-white">tough repair</strong>."</p>
+                    <p class="font-semibold text-sm text-accent-blue">- Dinesh M., Tatabad</p>
+                </div>
+
+                <!-- Review Card 2 (New Sale) -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-inner border-l-4 border-accent-blue">
+                    <div class="flex text-yellow-400 mb-3">
+                        <svg class="w-4 h-4 mr-1"><use xlink:href="#star"></use></svg>
+                        <svg class="w-4 h-4 mr-1"><use xlink:href="#star"></use></svg>
+                        <svg class="w-4 h-4 mr-1"><use xlink:href="#star"></use></svg>
+                        <svg class="w-4 h-4 mr-1"><use xlink:href="#star"></use></svg>
+                        <svg class="w-4 h-4"><use xlink:href="#star"></use></svg>
+                    </div>
+                    <p class="text-gray-300 italic mb-4">"Purchased the new iPhone 16 Pro Max here. Mr. Sahul Hammed gave a great deal and the setup was seamless. <strong class="text-white">Authentic product</strong> and trustworthy team."</p>
+                    <p class="font-semibold text-sm text-accent-blue">- Kavitha P., Saibaba Colony</p>
+                </div>
+
+                <!-- Review Card 3 (Used Sale/Service) -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-inner border-l-4 border-yellow-400">
+                    <div class="flex text-yellow-400 mb-3">
+                        <svg class="w-4 h-4 mr-1"><use xlink:href="#star"></use></svg>
+                        <svg class="w-4 h-4 mr-1"><use xlink:href="#star"></use></svg>
+                        <svg class="w-4 h-4 mr-1"><use xlink:href="#star"></use></svg>
+                        <svg class="w-4 h-4 mr-1"><use xlink:href="#star"></use></svg>
+                        <svg class="w-4 h-4"><use xlink:href="#star"></use></svg>
+                    </div>
+                    <p class="text-gray-300 italic mb-4">"The used phone I bought was immaculate, and they even offered a <strong class="text-white">6-month service warranty</strong>. This is the place for great deals and peace of mind."</p>
+                    <p class="font-semibold text-sm text-accent-blue">- Manoj R., Peelamedu</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CONTACT & LOCATION SECTION -->
+        <section id="contact" class="py-16 animated-section" data-delay="0.35">
+            <div class="bg-[#111827] p-8 md:p-12 rounded-2xl shadow-trust border border-gray-700">
+                <h2 class="text-4xl font-bold text-center mb-10 text-accent-blue">Visit Our Store & Meet Sahul Hammed</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Owner Photo & Details - Uses local path Owner.jpg -->
+                    <div class="md:col-span-1 text-center bg-gray-900 p-6 rounded-xl">
+                        <img 
+                            src="Owner.jpg" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/200x200/4299e1/ffffff?text=Owner';" 
+                            alt="Owner Sahul Hammed" 
+                            class="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-accent-blue shadow-lg">
+                        <p class="text-xl font-bold text-white">Sahul Hammed</p>
+                        <p class="text-gray-400">Proprietor & Lead Technician</p>
+                        <p class="text-2xl font-black text-white mt-4"><a href="tel:+919876543210" class="hover:text-blue-300">+91 98765 43210</a></p>
+                        <p class="text-sm text-gray-500">Call/WhatsApp Now</p>
+                    </div>
+
+                    <!-- Store Location Map/Photo - Uses local path Store.jpg -->
+                    <div class="md:col-span-2 space-y-6">
+                        <div class="rounded-xl overflow-hidden shadow-inner border border-gray-700">
+                            <img 
+                                src="Store.jpg" 
+                                onerror="this.onerror=null;this.src='https://placehold.co/800x300/1e293b/94a3b8?text=Galaxy+Mobiles+Shop+Exterior';" 
+                                alt="Shop Location Photo" 
+                                class="w-full h-48 object-cover">
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0 text-yellow-400"><use xlink:href="#map-pin"></use></svg>
+                            <div>
+                                <p class="text-gray-400">Our Address (Gandhipuram, Coimbatore)</p>
+                                <p class="text-lg font-bold text-white">
+                                    12/A, Elite Towers, Cross Cut Road,<br>
+                                    Coimbatore, Tamil Nadu - 641012
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0 text-yellow-400"><use xlink:href="#clock"></use></svg>
+                            <div>
+                                <p class="text-gray-400">Business Hours</p>
+                                <p class="text-lg font-bold text-white">Monday - Saturday: 10:00 AM to 9:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Final Footer -->
+    <footer class="mt-16 py-6 border-t border-gray-800 text-center text-gray-500">
+        <p>&copy; 2025 Galaxy Mobiles. Your Trusted Mobile Partner in Coimbatore, Tamil Nadu. Designed for Mobile Presentation.</p>
+    </footer>
+
+    <!-- JavaScript for Staggered Fade-In Animation (On Scroll/View) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.animated-section');
+
+            sections.forEach((section) => {
+                const delay = parseFloat(section.getAttribute('data-delay') || 0);
+
+                // Use Intersection Observer for professional scroll-based animation trigger
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            setTimeout(() => {
+                                // Apply the animation style
+                                entry.target.style.animationName = 'fadeInUp';
+                            }, delay * 1000);
+                            observer.unobserve(entry.target); // Stop observing after animation starts
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }); 
+
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
+
