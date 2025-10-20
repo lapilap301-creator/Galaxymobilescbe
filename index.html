@@ -13,6 +13,7 @@
             background-color: #050b10; /* Extra Deep Navy Blue Background */
             color: #f1f5f9;
             overflow-x: hidden;
+            padding-bottom: 80px; /* Space for the sticky CTA bar */
         }
         /* Custom CSS for the stunning staggered fade-in effect */
         @keyframes fadeInUp {
@@ -47,11 +48,26 @@
             background-color: #4299e1;
             box-shadow: 0 0 15px rgba(66, 153, 225, 0.6);
         }
+        .credit-glamour {
+            background-color: #ffcc00; /* Bright yellow */
+            color: #1a202c; /* Deep text color */
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.8);
+            display: inline-block;
+        }
+        .credit-glamour a {
+            color: #c53030; /* Red for emphasis */
+            font-weight: 900;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
-    <!-- SVG Icon Definitions (Used for Services and Reviews) -->
+    <!-- SVG Icon Definitions (Used for Services, Reviews, and new CTAs) -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="phone-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 8.5V4h-4"/><path d="M22 4L12 14"/><path d="M10 2l1.5 1.5M2 17l3 3M20 7l-3-3"/><path d="M12 20h.01"/><path d="M5 21a2 2 0 01-2-2v-2a2 2 0 012-2h14a2 2 0 012 2v2a2 2 0 01-2 2H5z"/></symbol>
         <symbol id="replace" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2c4.4 0 8 3.6 8 8s-3.6 8-8 8"/><path d="M10 22c-4.4 0-8-3.6-8-8s3.6-8 8-8"/><path d="M15 16l-3 3-3-3"/><path d="M9 8l3-3 3 3"/></symbol>
@@ -60,9 +76,10 @@
         <symbol id="user-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M17 11l2 2 4-4"/></symbol>
         <symbol id="clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
         <symbol id="award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><path d="M12 15L12 21M17 19L19 21M7 19L5 21"/></symbol>
-        <symbol id="star" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-        </symbol>
+        <symbol id="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+        <!-- New Icons for CTA -->
+        <symbol id="phone-call" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.63A2 2 0 013.08 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></symbol>
+        <symbol id="whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 3.12 1.34 5.94 3.49 7.82l-1.92 2.18 2.27-.61c1.86.81 3.9 1.25 6.16 1.25 5.52 0 10-4.48 10-10C22 6.48 17.52 2 12 2zm3.33 13.91c-.19.38-.63.85-1.07.95-.44.1-.96.02-1.42-.39-.77-.66-1.57-1.63-2.22-2.58-.65-.95-1.12-1.98-1.12-3.14 0-.85.34-1.29.67-1.55.33-.26.7-.35.94-.35.24 0 .44 0 .61.35.19.38.35.8.52 1.15.17.35.29.69.41.97.09.2.04.41-.05.62-.11.23-.27.48-.39.59-.12.11-.25.21-.36.33-.12.11-.22.25-.3.42-.08.17-.11.37-.06.57.06.19.23.41.41.59.18.18.39.35.61.46.22.11.44.15.65.09.18-.06.37-.18.55-.37.19-.19.4-.35.61-.46.21-.11.43-.16.63-.09.2.06.4.2.62.47.21.27.35.53.44.7.09.17.14.34.19.57.05.23.05.47 0 .7z"/></symbol>
     </svg>
 
     <!-- Navigation Bar -->
@@ -91,7 +108,7 @@
     <div class="pt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- 1. HERO SECTION & EXPERIENCE BANNER -->
-        <section class="pb-16 text-center">
+        <section class="pb-10 text-center">
             <div class="animated-section" data-delay="0.05">
                 <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tighter leading-tight text-white mb-4">
                     Coimbatore's <span class="text-accent-blue block sm:inline">Guaranteed Mobile Expertise.</span>
@@ -109,6 +126,23 @@
                 <p class="text-sm text-gray-300 mt-1">Local Focus, Premium Mobile Solutions</p>
             </div>
         </section>
+
+        <!-- NEW: STICKY MOBILE CTA BAR (for desktop users, it's a fixed button at the bottom) -->
+        <!-- CRITICAL FIX: This bar now uses Shahul Hameed's number: 9894712382 -->
+        <div class="fixed bottom-0 left-0 right-0 z-40 bg-[#111827] border-t border-blue-800/50 p-2 md:hidden">
+            <div class="flex space-x-2 w-full max-w-lg mx-auto">
+                <a href="tel:9894712382" class="flex-1 flex items-center justify-center p-3 rounded-xl bg-accent-blue hover:bg-blue-600 transition duration-200 text-white font-bold shadow-lg shadow-blue-500/50">
+                    <svg class="w-5 h-5 mr-2"><use xlink:href="#phone-call"></use></svg>
+                    Call Shahul Sir
+                </a>
+                <!-- WhatsApp link with pre-filled message for Shahul Hameed -->
+                <a href="https://wa.me/919894712382?text=Hi%20Sahul%20bro%20I%20need%20more%20details%20about%20your%20shop" target="_blank" class="flex-1 flex items-center justify-center p-3 rounded-xl bg-green-500 hover:bg-green-600 transition duration-200 text-white font-bold shadow-lg shadow-green-500/50">
+                    <svg class="w-5 h-5 mr-2"><use xlink:href="#whatsapp"></use></svg>
+                    WhatsApp Chat
+                </a>
+            </div>
+        </div>
+        <!-- End of Sticky CTA Bar -->
 
 
         <!-- 2. WHY CHOOSE US (TRUST PILLARS) SECTION -->
@@ -270,7 +304,7 @@
                         <svg class="w-4 h-4 mr-1"><use xlink:href="#star"></use></svg>
                         <svg class="w-4 h-4"><use xlink:href="#star"></use></svg>
                     </div>
-                    <p class="text-gray-300 italic mb-4">"Purchased the new iPhone 16 Pro Max here. Mr. Sahul Hammed gave a great deal and the setup was seamless. <strong class="text-white">Authentic product</strong> and trustworthy team."</p>
+                    <p class="text-gray-300 italic mb-4">"Purchased the new iPhone 16 Pro Max here. Mr. Shahul Hameed gave a great deal and the setup was seamless. <strong class="text-white">Authentic product</strong> and trustworthy team."</p>
                     <p class="font-semibold text-sm text-accent-blue">- Kavitha P., Saibaba Colony</p>
                 </div>
 
@@ -292,19 +326,20 @@
         <!-- 6. CONTACT & LOCATION SECTION -->
         <section id="contact" class="py-16 animated-section" data-delay="0.35">
             <div class="bg-[#111827] p-8 md:p-12 rounded-2xl shadow-trust border border-gray-700">
-                <h2 class="text-4xl font-bold text-center mb-10 text-accent-blue">Visit Our Store & Meet Sahul Hammed</h2>
+                <h2 class="text-4xl font-bold text-center mb-10 text-accent-blue">Visit Our Store & Meet Shahul Hameed</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Owner Photo & Details - Uses local path Owner.jpg -->
                     <div class="md:col-span-1 text-center bg-gray-900 p-6 rounded-xl">
                         <img 
                             src="Owner.jpg" 
-                            onerror="this.onerror=null;this.src='https://placehold.co/200x200/4299e1/ffffff?text=Owner';" 
-                            alt="Owner Sahul Hammed" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/200x200/4299e1/ffffff?text=Shahul+Hameed';" 
+                            alt="Owner Shahul Hameed" 
                             class="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-accent-blue shadow-lg">
-                        <p class="text-xl font-bold text-white">Sahul Hammed</p>
+                        <p class="text-xl font-bold text-white">Shahul Hameed</p>
                         <p class="text-gray-400">Proprietor & Lead Technician</p>
+                        <!-- Shahul Hameed's Number: 9894712382 -->
                         <p class="text-2xl font-black text-white mt-4"><a href="tel:9894712382" class="hover:text-blue-300"> 9894712382 </a></p>
-                        <p class="text-sm text-gray-500">Call/WhatsApp Now</p>
+                        <p class="text-sm text-gray-500">Call/WhatsApp (Store Contact)</p>
                     </div>
 
                     <!-- Store Location Map/Photo - Uses local path Store.jpg -->
@@ -338,8 +373,14 @@
         </section>
     </div>
 
-    <!-- Final Footer -->
+    <!-- Final Footer & Glamorous Credit -->
     <footer class="mt-16 py-6 border-t border-gray-800 text-center text-gray-500">
+        <!-- Glamorous Credit Section uses Basith's number: 6374030041 -->
+        <div class="mb-4">
+            <span class="credit-glamour">
+                Loved this page? It's created by <a href="https://instagram.com/basith.speaks" target="_blank">Basith.speaks on IG</a> or call him here to build yours too for super cheap and best (<a href="tel:6374030041">6374030041</a>)
+            </span>
+        </div>
         <p>&copy; 2025 Galaxy Mobiles. Your Trusted Mobile Partner in Coimbatore, Tamil Nadu. Designed for Mobile Presentation.</p>
     </footer>
 
